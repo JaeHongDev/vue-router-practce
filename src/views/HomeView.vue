@@ -7,12 +7,17 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import HelloWorld from '@/components/HelloWorld.vue';
+import { useRoute, useRouter } from 'vue-router/composables'; // @ is an alias to /src
 
 export default Vue.extend({
   name: 'HomeView',
   components: {
     HelloWorld,
+  },
+  setup: () => {
+    const router = useRouter();
+    const route = useRoute();
   },
 });
 </script>
